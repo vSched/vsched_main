@@ -1,3 +1,9 @@
 [submodule "vsched_kernel"]
 	path = vsched_kernel
 	url = https://github.com/vSched/vsched_kernel.git
+[submodule "vtopology"]
+	path = vtopology
+	url = https://github.com/vSched/vtopology.git
+[submodule "vcapacity"]
+	path = vcapacity
+	url = https://github.com/vSched/vcapacity.git
