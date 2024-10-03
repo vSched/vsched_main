@@ -96,7 +96,7 @@ sudo ./vtopology/vtop
 
 ### Running vSched
 
-1. After running the probers, use the bash scripts to enable the rest of vsched:
+1. After running the probers, use the bash scripts to enable the rest of vsched (IVH and BVS):
 
 ```
 sudo ./activate_vsched_bpf.sh
