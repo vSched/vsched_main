@@ -38,7 +38,7 @@ sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev li
 
 2.Clone the vSched repository in your VM:
 
-git clone https://github.com/yourusername/vsched.git
+git clone [https://github.com/yourusername/vsched.git](https://github.com/vSched/vsched_main.git)
 cd vsched
 
 3.Compile and install the custom kernel:
