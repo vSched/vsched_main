@@ -1,0 +1,3 @@
+[submodule "vsched_kernel"]
+	path = vsched_kernel
+	url = https://github.com/vSched/vsched_kernel.git
