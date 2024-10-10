@@ -5,9 +5,22 @@
 
 vSched is a novel approach to task scheduling in cloud virtual machines, providing accurate vCPU abstraction and enhancing performance across various VM types. This repository contains everything you need to run and experiment with vSched.
 
+## Authors
+- Edward Guo (Hofstra University)
+- Weiwei Jia (University of Rhode Island)
+- Xiaoning Ding (New Jersey Institute of Technology)
+- Jianchen Shan (Hofstra University)
+
+All inquiries regarding this project should be directed to Edward, at eguo3@pride.hofstra.edu.
+
 ## Important Note
 
-**This is the main repository for vSched.** If you want to run or experiment with vSched, this is the repository you need. It contains all necessary components, including the custom kernel and required userland programs.
+**This is the main repository for vSched.** 
+This repository contains all components necessary to run and experiment with vSched, including the custom kernel and userland programs.
+
+⚠️ **vSched is intended for x86 Intel systems**  
+vSched is built and tested on an x86 Intel system with Ubuntu. Different configurations are not supported.
+
 
 ## Repository Structure
 
@@ -20,40 +33,50 @@ This repository contains:
 - `activate_vsched_bpf.sh`: Script to activate IVH and BPF
 - `activate_vsched_total.sh`: Ease-of-use script to setup and run vsched directly
 
-### Installing Host Prerequisites and creating a VM
-If you already have a VM that you want to use vSched on, skip these steps.
 
-1.Run the following commands on your host system to install virsh and enable creation of VM's
+## Using vSched
+
+### Installing Host Prerequisites and creating a VM
+
+Skip this section if you already have a suitable VM.
+
+
+
+1.Install virsh on your host system:
+
 
 ```
 sudo apt update
 sudo apt install qemu-kvm libvirt-daemon-system
 ```
 
-2.Use the GUI or follow a guide to create a VM
+2.Create a VM using the GUI or follow the guide at
 
 [https://deploy.equinix.com/developers/guides/kvm-and-libvirt/](https://deploy.equinix.com/developers/guides/kvm-and-libvirt/)
 
-3.Use a GUI, SSH or `virsh console` to access your VM
+3.Access your VM via GUI, SSH, or 'virsh console'
 
 
 ### Setup and run vSched's Kernel
 
-1.Install prerequisites inside the VM:
+⚠️ The following steps should be performed inside your VM, not on the host system. 
+
+
+1.Install prerequisites:
 
 ```
 sudo apt update
 sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev libelf-dev gcc make
 ```
 
-2.Clone the vSched repository in your VM:
+2.Clone the repository:
 
 ```
-git clone [https://github.com/yourusername/vsched.git](https://github.com/vSched/vsched_main.git)
+git clone https://github.com/vSched/vsched_main.git
 cd vsched
 ```
 
-3.Compile and install the custom kernel:
+3.Compile and install:
 
 ```
 cd vsched_kernel
@@ -74,6 +97,7 @@ uname -r
 ```
 
 ### Running the Probers
+
 1.Run the setup bash script
 
 ```
@@ -116,6 +140,8 @@ sudo ./activate_vsched_total.sh
 ```
 sudo ./deactivate_vsched.sh
 ```
+
+
 
 
 
