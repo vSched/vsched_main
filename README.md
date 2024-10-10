@@ -96,6 +96,11 @@ After reboot, verify you're running the new kernel:
 uname -r
 ```
 
+The output should show:
+```
+6.1.36-vsched
+```
+
 ### Running the Probers
 
 1.Run the setup bash script
