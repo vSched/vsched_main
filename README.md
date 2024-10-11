@@ -69,10 +69,10 @@ sudo apt update
 sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev libelf-dev gcc make
 ```
 
-2.Clone the repository:
+2.Clone the repository and it's submodules:
 
 ```
-git clone https://github.com/vSched/vsched_main.git
+git clone --recursive-submodules https://github.com/vSched/vsched_main.git
 cd vsched_main
 ```
 
