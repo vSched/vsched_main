@@ -74,7 +74,7 @@ sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev li
 
 ```
 git clone --recursive-submodules https://github.com/vSched/vsched_main.git
-cd vsched_main
+cd ./vsched_main
 ```
 
 3.Compile and install:
