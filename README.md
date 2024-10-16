@@ -66,7 +66,7 @@ sudo apt install qemu-kvm libvirt-daemon-system
 
 ```
 sudo apt update
-sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev libelf-dev gcc make
+sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev libelf-dev gcc make git 
 ```
 
 
