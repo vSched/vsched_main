@@ -22,9 +22,9 @@ sudo echo -20 | sudo tee /sys/fs/cgroup/hi_prgroup/cpu.weight.nice
 #sudo make
 
 
-(cd ./vsched_kernel/vtopology/ && sudo make)
+(cd ./vtopology/ && sudo make)
 
-(cd ./vsched_kernel/vcapacity/ && sudo make)
+(cd ./vcapacity/ && sudo make)
 
 (cd ./vsched_kernel/custom_modules/ && sudo make)
 
