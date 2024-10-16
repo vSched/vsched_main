@@ -128,13 +128,13 @@ sudo ./setup_vsched.sh
 2. If you want to run vcapacity without custom starting parameters
 
 ```
-(cd ./vcapacity && ./vcapacity/vcap &)
+(cd ./vcapacity && ./vcap &)
 ```
 
 3. If you want to run vtopology without custom starting parameters
 
 ```
-(cd ./vtopology && ./vtopology/vtop &)
+(cd ./vtopology && ./vtop &)
 ```
 
 ### Running vSched
