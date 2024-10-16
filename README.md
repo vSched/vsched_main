@@ -82,8 +82,8 @@ cd ./vsched_main
 ```
 cd vsched_kernel
 cp cust_vsch_config .config
-make oldconfig
-make -j$(nproc)
+sudo make oldconfig
+sudo make -j$(nproc)
 sudo make modules_install
 sudo make install
 sudo update-grub
@@ -134,7 +134,7 @@ sudo ./setup_vsched.sh
 3. If you want to run vtopology without custom starting parameters
 
 ```
-(cd ./vtopolopgy && ./vtopology/vtop &)
+(cd ./vtopology && ./vtopology/vtop &)
 ```
 
 ### Running vSched
