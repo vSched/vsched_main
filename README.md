@@ -82,7 +82,7 @@ cd ./vsched_main
 ```
 cd vsched_kernel
 cp cust_vsch_config .config
-make olddefconfig
+make config
 make -j$(nproc)
 sudo make modules_install
 sudo make install
