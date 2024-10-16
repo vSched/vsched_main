@@ -69,6 +69,7 @@ sudo apt update
 sudo apt install -y git build-essential libncurses5-dev bison flex libssl-dev libelf-dev gcc make
 ```
 
+
 2.Clone the repository and it's submodules:
 
 ```
@@ -80,7 +81,7 @@ cd vsched_main
 
 ```
 cd vsched_kernel
-cp /boot/config-$(uname -r) .config
+cp cust_vsch_config .config
 make olddefconfig
 make -j$(nproc)
 sudo make modules_install
@@ -101,23 +102,36 @@ The output should show:
 6.1.36-vsched
 ```
 
-### Running the Probers
+4.Alter the path at the head of VCFS's Makefile to the location of ./vsched_kernel
+```
+sudo nano ./vsched_kernel/tools/bpf/vcfs/Makefile
+```
 
-1.Run the setup bash script
+Change the following line to the location of the custom kernel on your system
+```
+# FIX ME
+TREE=/home/ubuntu/vsched_main/vsched_kernel
+```
+
+5.Run the setup bash script
 
 ```
 sudo ./setup_vsched.sh
 ```
 
-2. Check the README in vCapacity and vTopology for more information on how to run and configure each tool individually.
 
-3. If you want to run vcapacity without custom starting parameters
+### Running the Probers
+
+
+1. Check the README in vCapacity and vTopology for more information on how to run and configure each tool individually.
+
+2. If you want to run vcapacity without custom starting parameters
 
 ```
 sudo ./vcapacity/vcap -v
 ```
 
-4. If you want to run vtopology without custom starting parameters
+3. If you want to run vtopology without custom starting parameters
 
 ```
 sudo ./vtopology/vtop 
