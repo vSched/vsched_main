@@ -1,5 +1,5 @@
 sudo ./setup_vsched.sh
-sudo ./vcapacity/vcap &
-sudo ./vtopology/vtop &
+(cd ./vcapacity && sudo ./vcap &)
+(cd ./vtopology && sudo ./vtop &)
 sudo ./activate_vsched_bpf.sh
 
